@@ -37,7 +37,7 @@
     header{
       background:var(--light-blue);
       border-bottom:1px solid var(--border);
-      padding:20px 0;
+      padding:16px 0;
       position:sticky;
       top:0;
       z-index:100;
@@ -48,6 +48,25 @@
       max-width:900px;
       margin:0 auto;
       padding:0 22px;
+    }
+    
+    .institutions{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      flex-wrap:wrap;
+      font-size:13px;
+      font-weight:600;
+      color:var(--accent);
+      padding-bottom:12px;
+      margin-bottom:12px;
+      border-bottom:1px solid var(--border);
+    }
+    
+    .inst-sep{
+      color:var(--muted);
+      opacity:0.45;
+      font-weight:400;
     }
     
     nav{
@@ -64,10 +83,13 @@
     }
     
     .navlinks{
-      margin-left:auto;
       display:flex;
       gap:12px;
       flex-wrap:wrap;
+    }
+    
+    nav > .button{
+      margin-left:auto;
     }
     
     .navlinks a{
@@ -334,8 +356,19 @@
         font-size:12px;
       }
       
+      .institutions{
+        font-size:11px;
+        gap:6px;
+        padding-bottom:10px;
+        margin-bottom:10px;
+      }
+      
       nav{
         justify-content:space-between;
+      }
+      
+      nav > .button{
+        margin-left:0;
       }
       
       section{
@@ -369,8 +402,14 @@
 <body>
   <header>
     <div class="container">
+      <div class="institutions" aria-label="Conducted by">
+        <span>Ludwig Boltzmann Institute for Digital Health and Prevention</span>
+        <span class="inst-sep" aria-hidden="true">·</span>
+        <span>Salzburg Research</span>
+        <span class="inst-sep" aria-hidden="true">·</span>
+        <span>LMU München</span>
+      </div>
       <nav>
-        <div class="logo">Ludwig Boltzmann Institute for Digital Health and Prevention</div>
         <div class="navlinks">
           <a href="#home">Home</a>
           <a href="#timeline">Timeline</a>
@@ -428,6 +467,10 @@
           <p class="muted">Principal Investigator: <strong>RELATE Study Team</strong><br>
           Ludwig Boltzmann Institute for Digital Health and Prevention<br>
           Email: <a href="mailto:dominik.hofer@lbg.ac.at">dominik.hofer@lbg.ac.at</a></p>
+
+          <p class="muted"><strong>In collaboration with:</strong><br>
+          Salzburg Research Forschungsgesellschaft m.b.H.<br>
+          Ludwig-Maximilians-Universität München (LMU München)</p>
         </div>
 
         <aside class="card">
@@ -437,6 +480,13 @@
             <li><a href="#downloads">Download MORE app</a></li>
             <li><a href="Informed%20Consent.pdf" target="_blank">Download consent form</a></li>
             <li><a href="#privacy">Read data protection policy</a></li>
+          </ul>
+
+          <h3>Research Partners</h3>
+          <p class="muted">RELATE is conducted by the Ludwig Boltzmann Institute for Digital Health and Prevention in collaboration with:</p>
+          <ul>
+            <li>Salzburg Research Forschungsgesellschaft m.b.H.</li>
+            <li>Ludwig-Maximilians-Universität München (LMU München)</li>
           </ul>
 
           <h3>Independent Review</h3>
@@ -646,6 +696,7 @@
               <strong>Ludwig Boltzmann Institute for Digital Health and Prevention</strong><br>
               Email: <a href="mailto:dominik.hofer@lbg.ac.at">dominik.hofer@lbg.ac.at</a>
             </p>
+            <p class="muted">The RELATE study is conducted in collaboration with Salzburg Research Forschungsgesellschaft m.b.H. and Ludwig-Maximilians-Universität München (LMU München). The Ludwig Boltzmann Institute for Digital Health and Prevention is the data controller for this website and the study.</p>
 
             <h3>What Personal Data We Collect</h3>
             <p>This website is designed with privacy in mind and collects minimal data:</p>
@@ -718,6 +769,7 @@
               <strong>Ludwig Boltzmann Institut für Digital Health and Prevention</strong><br>
               E-Mail: <a href="mailto:dominik.hofer@lbg.ac.at">dominik.hofer@lbg.ac.at</a>
             </p>
+            <p class="muted">Die RELATE-Studie wird in Kooperation mit der Salzburg Research Forschungsgesellschaft m.b.H. und der Ludwig-Maximilians-Universität München (LMU München) durchgeführt. Das Ludwig Boltzmann Institut für Digital Health and Prevention ist datenschutzrechtlich Verantwortlicher für diese Website und die Studie.</p>
 
             <h3>Welche personenbezogenen Daten wir erheben</h3>
             <p>Diese Website wurde datenschutzfreundlich konzipiert und sammelt minimale Daten:</p>
@@ -789,6 +841,7 @@
       <div class="container">
         <div class="muted">
           &copy; <span id="year"></span> Ludwig Boltzmann Institute for Digital Health and Prevention<br>
+          In collaboration with Salzburg Research Forschungsgesellschaft m.b.H. and Ludwig-Maximilians-Universität München (LMU München)<br>
           RELATE — Personalised AI Support for Physical Activity
         </div>
       </div>
